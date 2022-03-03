@@ -31,6 +31,7 @@ img {
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
 .flex-center {
@@ -64,7 +65,6 @@ section {
   color: var(--primary);
   cursor: pointer;
   transition: 0.3s;
-  align-items: center;
 }
 
 .go_top:hover {

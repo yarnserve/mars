@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <link rel="icon" href="./images/icon.png" />
     <title>Mars Project</title>
@@ -96,7 +98,12 @@
 
     <!---------------------- main slide ------------------------------>
     <section class="hero">
-      <div class="slide_01"></div>
+      <div class="slide_01">
+        <div class="item item_01"></div>
+        <div class="item item_02"></div>
+        <div class="item item_03"></div>
+      </div>
+
       <div class="arrow"></div>
       <div class="slide_text"></div>
     </section>
@@ -152,17 +159,28 @@
       <div class="inner">footer 내용</div>
     </section>
 
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script>
-      var goTop = $('.go_top')
+      // ----------- full menu toggo -------------------//
+      var bars = $('.bars')
       var menu = $('.menu')
       var close = $('.close')
+      menu.hide()
 
-      goTop.on('click', function () {
+      bars.on('click', function () {
         menu.slideDown()
       })
 
       close.on('click', function () {
         menu.slideUp()
+      })
+
+      // ----------- slick slide -------------------//
+      $('.slide_01').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000
       })
     </script>
   </body>
