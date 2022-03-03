@@ -47,6 +47,10 @@ body {
   color: var(--primary);
 }
 
+section {
+  margin-bottom: 140px;
+}
+
 /*------------------- util items ------------------*/
 .go_top {
   width: 60px;

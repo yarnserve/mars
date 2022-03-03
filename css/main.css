@@ -56,3 +56,10 @@
 .menu_list ul li a:hover {
   text-decoration: underline;
 }
+
+/*-------------------- header -------------------*/
+.logo {
+  display: block;
+  width: 228px;
+  margin-right: auto;
+}
