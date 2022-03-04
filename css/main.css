@@ -213,11 +213,11 @@ section.header {
 /* =========== hero slide indicate custom ===============*/
 
 /*-------------------- section slide -------------------*/
-.slide_02 {
+.slide_02 .slide {
   position: relative;
 }
 
-.slide_02 h3 {
+.slide_02 .slide h3 {
   position: absolute;
   top: 50%;
   left: 50%;
