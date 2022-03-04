@@ -215,6 +215,8 @@ section.header {
 /*-------------------- section slide -------------------*/
 .slide_02 .slide {
   position: relative;
+  border-radius: 18px;
+  overflow: hidden !important;
 }
 
 .slide_02 .slide h3 {
@@ -223,4 +225,91 @@ section.header {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+}
+
+.slide_02 .slick-dots {
+  bottom: 0;
+  top: -56px;
+  text-align: right;
+}
+
+.slide_02 .slick-dots li {
+  margin: 0 3px;
+}
+
+.slide_02 .slick-dots li button::before {
+  font-size: 16px;
+}
+
+/*-------------------- section card 01 -------------------*/
+.section_card_01 .title_area a {
+  color: var(--gray-mid);
+}
+
+.section_card_01 .title_area a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.section_card_01 .cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.section_card_01 .cards .card {
+  height: 282px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.section_card_01 .cards .card img {
+  height: 282px;
+  object-fit: cover;
+}
+
+.section_card_01 .cards .card .dimm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.3;
+}
+.section_card_01 .cards .card p {
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.section_card_01 .cards .card:hover .dimm {
+  opacity: 1;
+}
+
+.section_card_01 .cards .card:hover p {
+  bottom: 20px;
+}
+
+.section_card_01 .cards .card:nth-child(1) {
+  grid-column: span 7;
+}
+
+.section_card_01 .cards .card:nth-child(2) {
+  grid-column: span 5;
+}
+
+.section_card_01 .cards .card:nth-child(3) {
+  grid-column: span 5;
+}
+
+.section_card_01 .cards .card:nth-child(4) {
+  grid-column: span 7;
 }
