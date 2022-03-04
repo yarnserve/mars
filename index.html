@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <link rel="icon" href="./images/icon.png" />
     <title>Mars Project</title>
@@ -104,15 +104,53 @@
         <div class="item item_03"></div>
       </div>
 
-      <div class="arrow"></div>
-      <div class="slide_text"></div>
+      <div class="arrow flex flex-between">
+        <span class="prev"><img src="./images/main/prev_btn.png" alt="" /></span>
+        <span class="next"><img src="./images/main/next_btn.png" alt="" /></span>
+      </div>
+
+      <div class="slide_text">
+        <h2><span>화성이주 프로젝트</span>에 여러분의 참여를 기다립니다!</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies tortor ut ligula lacinia,
+          efficitur rutrum lectus tempor. Nulla rutrum magna
+        </p>
+        <div class="btns flex">
+          <a href="#" class="btn flex flex-center">내용보기</a>
+          <a href="#" class="btn flex flex-center btn_alt">신청하기</a>
+        </div>
+      </div>
     </section>
 
     <!---------------------- section slide ------------------------------>
     <section class="section_slide">
       <div class="inner">
-        <div class="title_area"></div>
-        <div class="slide_02"></div>
+        <div class="title_area">
+          <h3>금주의 Pick</h3>
+          <p>우주의 중심을 발견하는 날, 인간이 세계의 중심이 아님을 깨달을 것이다</p>
+        </div>
+        <div class="slide_02">
+          <div class="slide">
+            <img src="./images/main/silde_01.jpg" alt="slide_image" />
+            <h3>인간은 우주의 중심이 아니다.</h3>
+          </div>
+          <div class="slide">
+            <img src="./images/main/silde_02.jpg" alt="slide_image" />
+            <h3>가난한 이런 불러 까닭이요.</h3>
+          </div>
+          <div class="slide">
+            <img src="./images/main/silde_03.jpg" alt="slide_image" />
+            <h3>자랑처럼 멀리 이 비둘기.</h3>
+          </div>
+          <div class="slide">
+            <img src="./images/main/silde_04.jpg" alt="slide_image" />
+            <h3>없이 때 풀이 버리었습니다.</h3>
+          </div>
+          <div class="slide">
+            <img src="./images/main/silde_05.jpg" alt="slide_image" />
+            <h3>계절이 밤을 하늘에는 이름과.</h3>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -166,21 +204,41 @@
       var bars = $('.bars')
       var menu = $('.menu')
       var close = $('.close')
-      menu.hide()
 
       bars.on('click', function () {
-        menu.slideDown()
+        menu.show()
       })
 
       close.on('click', function () {
-        menu.slideUp()
+        menu.hide()
       })
 
       // ----------- slick slide -------------------//
       $('.slide_01').slick({
         dots: true,
         autoplay: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 5000,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next')
+      })
+
+      $('.slide_02').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000
+      })
+
+      // ----------- header bg-toggle -------------------//
+      var header = $('.header')
+
+      $(window).scroll(function () {
+        var scrollTopValue = $(document).scrollTop()
+
+        if (scrollTopValue > 0) {
+          header.addClass('active')
+        } else {
+          header.removeClass('active')
+        }
       })
     </script>
   </body>
