@@ -158,9 +158,9 @@
     <section class="section_card_01">
       <div class="inner">
         <div class="title_area">
-          <h3>우주! 어디까지 알고 있니?</h3>
+          <h3>우주에서 바라보는 지구</h3>
           <div class="flex flex-between">
-            <p>우주의 탄생과 진화 그리고 그 종말에 관한 이야기, 지금 시작해 볼까요.</p>
+            <p>처음보는 푸른 별 지구. 언제 부터 우리는 여기에 살았을까요?</p>
             <a href="#">전체보기 <i class="xi-angle-right-min"></i></a>
           </div>
         </div>
@@ -193,9 +193,51 @@
     <!---------------------- section card_02 ------------------------------>
     <section class="section_card_02">
       <div class="inner">
-        <div class="title_area"></div>
+        <div class="title_area">
+          <h3>우주! 어디까지 알고 있니?</h3>
+          <div class="flex flex-between">
+            <p>우주의 탄생과 진화 그리고 그 종말에 관한 이야기, 지금 시작해 볼까요.</p>
+            <a href="#">전체보기 <i class="xi-angle-right-min"></i></a>
+          </div>
+        </div>
+
         <ul class="cards">
-          6개
+          <li class="card">
+            <img src="./images/main/space_01.jpg" alt="space" />
+            <div class="dimm"></div>
+            <p>Jupiter</p>
+            <i class="xi-plus-circle-o"></i>
+          </li>
+          <li class="card">
+            <img src="./images/main/space_02.jpg" alt="space" />
+            <div class="dimm"></div>
+            <p>Jupiter</p>
+            <i class="xi-plus-circle-o"></i>
+          </li>
+          <li class="card">
+            <img src="./images/main/space_03.jpg" alt="space" />
+            <div class="dimm"></div>
+            <p>Jupiter</p>
+            <i class="xi-plus-circle-o"></i>
+          </li>
+          <li class="card">
+            <img src="./images/main/space_04.jpg" alt="space" />
+            <div class="dimm"></div>
+            <p>Jupiter</p>
+            <i class="xi-plus-circle-o"></i>
+          </li>
+          <li class="card">
+            <img src="./images/main/space_05.jpg" alt="space" />
+            <div class="dimm"></div>
+            <p>Jupiter</p>
+            <i class="xi-plus-circle-o"></i>
+          </li>
+          <li class="card">
+            <img src="./images/main/space_06.jpg" alt="space" />
+            <div class="dimm"></div>
+            <p>Jupiter</p>
+            <i class="xi-plus-circle-o"></i>
+          </li>
         </ul>
       </div>
     </section>
@@ -203,9 +245,16 @@
     <!---------------------- section map ------------------------------>
     <section class="section_map">
       <div class="inner">
-        <div class="title_area"></div>
+        <div class="title_area">
+          <h3>오시는 길</h3>
+          <p>우주로 가는 길은 당신과 아주 가까운 곳에 있습니다.</p>
+        </div>
       </div>
-      <div>다음지도</div>
+
+      <div
+        id="daumRoughmapContainer1646366480465"
+        class="root_daum_roughmap root_daum_roughmap_landing daum_map"
+      ></div>
     </section>
 
     <!---------------------- section insta ------------------------------>
@@ -224,6 +273,12 @@
     </section>
 
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      charset="UTF-8"
+      class="daum_roughmap_loader_script"
+      src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+    ></script>
+    z
 
     <script>
       // ----------- full menu toggo -------------------//
@@ -266,6 +321,13 @@
           header.removeClass('active')
         }
       })
+
+      // ----------- daum map -------------------//
+      new daum.roughmap.Lander({
+        timestamp: '1646366480465',
+        key: '29cwa',
+        mapHeight: '500'
+      }).render()
     </script>
   </body>
 </html>
