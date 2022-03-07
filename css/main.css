@@ -419,3 +419,50 @@ section.header {
 .section_insta .cards .card:hover img {
   opacity: 0.7;
 }
+
+/*-------------------- section footer -------------------*/
+.section_footer {
+  background-color: #f5f5f5;
+  color: var(--gray-dark);
+  font-size: 13px;
+  margin-bottom: initial;
+  padding: 50px 0;
+}
+
+.footer_logo {
+  width: 184px;
+  margin-right: 96px;
+}
+
+.footer_logo img {
+  filter: grayscale(100%);
+}
+
+.footer_menu a {
+  display: block;
+  padding: 0 20px;
+}
+
+.footer_menu li:first-child {
+  border-right: 1px solid var(--gray-mid);
+}
+
+.footer_info {
+  margin: 28px 0;
+  line-height: 2;
+}
+
+.footer_copyright {
+  color: #a4a4a4;
+}
+
+.social {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.social a {
+  font-size: 20px;
+  color: #8f8f8f;
+  padding: 10px;
+}
