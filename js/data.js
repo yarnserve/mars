@@ -2,8 +2,8 @@ const menus = [
   {
     title: '소개',
     subMenu: [
-      { text: '인사말', url: 'https://naver.com' },
-      { text: '주요연혁', url: 'https://daum.net' },
+      { text: '인사말', url: './about.html' },
+      { text: '주요연혁', url: './gallery.html' },
       { text: '수상내역', url: '' }
     ]
   },
@@ -47,7 +47,10 @@ const menus = [
   },
   {
     title: '채용',
-    subMenu: [{ text: '채용정보', url: '' }]
+    subMenu: [
+      { text: '채용정보', url: '' },
+      { text: '면접정보', url: '' }
+    ]
   }
 ]
 

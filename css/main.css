@@ -79,7 +79,6 @@ section.header {
 
 .header.active {
   background-color: #fff;
-  color: #000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -97,12 +96,22 @@ section.header {
   font-size: 26px;
   margin-left: 30px;
   cursor: pointer;
+  color: #fff;
+}
+
+.header.active .inner .bars {
+  color: #000;
 }
 
 .header .nav li a {
   font-size: 14px;
   display: block;
   padding: 20px;
+  color: #fff;
+}
+
+.header.active .nav li a {
+  color: #000;
 }
 
 /*-------------------- main slide -------------------*/
@@ -465,4 +474,72 @@ section.header {
   font-size: 20px;
   color: #8f8f8f;
   padding: 10px;
+}
+
+/*----------------------------------------------------*/
+/*-------------------- media query -------------------*/
+/*----------------------------------------------------*/
+@media (max-width: 1200px) {
+  .hero .slide_text {
+    text-align: center;
+  }
+
+  .hero .slide_text h2 {
+    margin: 0 auto;
+  }
+
+  .hero .slide_text p {
+    width: 80%;
+    margin: 34px auto 60px auto;
+  }
+
+  .hero .btns {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /*-------------------- full menu -------------------*/
+  .menu {
+    overflow: auto;
+  }
+
+  .menu .close {
+    font-size: 30px;
+  }
+
+  .menu_list {
+    flex-direction: column;
+  }
+
+  .menu_list > li > a {
+    font-size: 20px;
+    padding-bottom: inherit;
+    margin-bottom: inherit;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 16px;
+  }
+
+  .menu_list > li > a::after {
+    display: none;
+  }
+
+  .menu_list > li > a::before {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menu_list ul {
+    display: none;
+  }
+
+  .menu_list ul li a {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
 }

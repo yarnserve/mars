@@ -5,12 +5,21 @@ const menuContainer = document.querySelector('.menu_list')
 menus.forEach(menu => {
   console.log(menu)
   const li = document.createElement('li')
-  const html = `<a href="#">소개</a>`
+  const html = `<a href="#">${menu.title}</a>`
   const ul = document.createElement('ul')
 
   li.innerHTML = html
+  li.appendChild(ul)
 
-  console.log(li)
+  menu.subMenu.forEach(item => {
+    const li = document.createElement('li')
+    const html = `<a href=${item.url}>${item.text}</a>`
+    li.innerHTML = html
+
+    ul.appendChild(li)
+  })
+
+  menuContainer.appendChild(li)
 })
 
 /* <li>

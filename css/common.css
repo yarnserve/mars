@@ -100,3 +100,15 @@ h3 {
   background-color: var(--primary);
   color: #fff;
 }
+
+@media (max-width: 992px) {
+  section {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 60px;
+  }
+}
