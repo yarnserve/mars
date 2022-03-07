@@ -81,6 +81,8 @@ h3 {
 .go_top {
   width: 60px;
   height: 60px;
+  text-align: center;
+  line-height: 60px;
   background-color: #fff;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
   position: fixed;
@@ -90,6 +92,8 @@ h3 {
   color: var(--primary);
   cursor: pointer;
   transition: 0.3s;
+  z-index: 10;
+  display: none;
 }
 
 .go_top:hover {
