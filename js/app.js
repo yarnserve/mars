@@ -3,7 +3,6 @@ import { menus } from './data.js'
 const menuContainer = document.querySelector('.menu_list')
 
 menus.forEach(menu => {
-  console.log(menu)
   const li = document.createElement('li')
   const html = `<a href="#">${menu.title}</a>`
   const ul = document.createElement('ul')

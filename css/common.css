@@ -111,4 +111,23 @@ h3 {
   section {
     margin-bottom: 60px;
   }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .btn {
+    width: 120px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 26px;
+  }
 }
