@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <link rel="stylesheet" href="./css/magnific-popup.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/sub.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="./js/jquery.magnific-popup.js"></script>
+    <!-- <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script> -->
     <link rel="icon" href="./images/icon.png" />
     <title>Mars Project : gallery</title>
   </head>
@@ -42,8 +46,7 @@
       <div class="header_title">
         <h2>우주 갤러리</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus perspiciatis
-          similique voluptates,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus perspiciatis similique voluptates,
         </p>
       </div>
     </section>
@@ -60,50 +63,62 @@
         </div>
 
         <!---------------- gallery contents ---------------->
-        <div class="gallery_btns">
-          <span class="gallery_btn" data-filter="*">전체</span>
+        <div class="gallery_btns flex flex-center">
+          <span class="gallery_btn on" data-filter="*">전체</span>
           <span class="gallery_btn" data-filter=".moon">달</span>
           <span class="gallery_btn" data-filter=".mountain">산</span>
           <span class="gallery_btn" data-filter=".sea">바다</span>
         </div>
 
         <div class="grid">
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_01.jpg" alt="" class="grid-item mountain"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_02.jpg" alt="" class="grid-item moon"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_03.jpg" alt="" class="grid-item moon"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_04.jpg" alt="" class="grid-item sea"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_05.jpg" alt="" class="grid-item sea"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_06.jpg" alt="" class="grid-item mountain"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_07.jpg" alt="" class="grid-item sea"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_08.jpg" alt="" class="grid-item moon"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_09.jpg" alt="" class="grid-item sea"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_010.jpg" alt="" class="grid-item moon"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_011.jpg" alt="" class="grid-item mountain"
-          /></a>
-          <a title="Hello jQuery..." href="#"
-            ><img src="./images/gallery/gallery_012.jpg" alt="" class="grid-item mountain"
-          /></a>
+          <div class="grid-sizer"></div>
+          <a title="Hello jQuery..." href="./images/gallery/gallery_01.jpg" class="grid-item mountain">
+            <img src="./images/gallery/gallery_01.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_02.jpg" class="grid-item moon">
+            <img src="./images/gallery/gallery_02.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_03.jpg" class="grid-item moon">
+            <img src="./images/gallery/gallery_03.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_04.jpg" class="grid-item sea">
+            <img src="./images/gallery/gallery_04.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_05.jpg" class="grid-item sea">
+            <img src="./images/gallery/gallery_05.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_06.jpg" class="grid-item mountain">
+            <img src="./images/gallery/gallery_06.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_07.jpg" class="grid-item sea">
+            <img src="./images/gallery/gallery_07.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_08.jpg" class="grid-item moon">
+            <img src="./images/gallery/gallery_08.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_09.jpg" class="grid-item sea">
+            <img src="./images/gallery/gallery_09.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_010.jpg" class="grid-item moon">
+            <img src="./images/gallery/gallery_010.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_011.jpg" class="grid-item mountain">
+            <img src="./images/gallery/gallery_011.jpg" alt="" />
+          </a>
+
+          <a title="Hello jQuery..." href="./images/gallery/gallery_012.jpg" class="grid-item mountain">
+            <img src="./images/gallery/gallery_012.jpg" alt="" />
+          </a>
         </div>
       </div>
     </section>
@@ -191,6 +206,33 @@
         goTop.click(function () {
           $('html, body').animate({ scrollTop: 0 }, 400)
         })
+      })
+    </script>
+
+    <script>
+      $(function () {
+        // init isotope
+        $('.grid').isotope({
+          itemSelector: '.grid-item',
+          percentPosition: true,
+          masonry: {
+            columnWidth: '.grid-sizer'
+          }
+        })
+
+        // filter isotope
+        $('.gallery_btns').on('click', 'span', function () {
+          var filterValue = $(this).attr('data-filter')
+          var btns = $('.gallery_btns').find('span')
+
+          btns.removeClass('on')
+          $(this).addClass('on')
+
+          $('.grid').isotope({ filter: filterValue })
+        })
+
+        // magnific popup
+        $('.grid-item').magnificPopup({ type: 'image' })
       })
     </script>
   </body>
