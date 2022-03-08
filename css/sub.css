@@ -1,0 +1,33 @@
+.sub_header {
+  height: 400px;
+  background: url('../images/gallery/sub_header_bg.jpg') no-repeat center / cover;
+  color: #fff;
+  text-align: center;
+}
+
+.header_title {
+  position: relative;
+  top: 40px;
+}
+
+.header_title h2 {
+  position: relative;
+  padding-bottom: 35px;
+  margin-bottom: 36px;
+}
+
+.header_title h2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.header_title p {
+  width: 70%;
+  margin: 0 auto;
+}

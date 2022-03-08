@@ -1,12 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/sub.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="icon" href="./images/icon.png" />
+    <title>Mars Project : gallery</title>
   </head>
   <body>
-    <h1>This is Gallery....</h1>
+    <!---------------------- go top --------------------------->
+    <div class="go_top"><i class="xi-arrow-up"></i></div>
+
+    <!---------------------- full menu --------------------------->
+    <div class="menu">
+      <div class="inner">
+        <ul class="menu_list flex flex-between"></ul>
+      </div>
+      <div class="close"><i class="xi-close-thin"></i></div>
+    </div>
+
+    <!---------------------- header ------------------------------>
+    <section class="header">
+      <div class="inner flex">
+        <a href="index.html" class="logo"><img src="./images/logo.png" alt="logo" /></a>
+        <ul class="nav flex">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="./gallery.html">갤러리</a></li>
+        </ul>
+        <div class="bars"><i class="xi-bars"></i></div>
+      </div>
+    </section>
+
+    <!---------------------- sub header ------------------------------>
+    <section class="sub_header flex flex-center">
+      <div class="header_title">
+        <h2>우주 갤러리</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus perspiciatis
+          similique voluptates,
+        </p>
+      </div>
+    </section>
+
+    <!---------------------- section gallery ------------------------------>
+    <section class="section_gallery">
+      <div class="inner">
+        <div class="breadcrumb">
+          <a href="#">홈</a>
+          <i class="xi-angle-right-min"></i>
+          <a href="#">커뮤니티</a>
+          <i class="xi-angle-right-min"></i>
+          <a href="#">갤러리</a>
+        </div>
+
+        <!---------------- gallery contents ---------------->
+        <div class="gallery_btns">
+          <span class="gallery_btn" data-filter="*">전체</span>
+          <span class="gallery_btn" data-filter=".moon">달</span>
+          <span class="gallery_btn" data-filter=".mountain">산</span>
+          <span class="gallery_btn" data-filter=".sea">바다</span>
+        </div>
+
+        <div class="grid">
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_01.jpg" alt="" class="grid-item mountain"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_02.jpg" alt="" class="grid-item moon"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_03.jpg" alt="" class="grid-item moon"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_04.jpg" alt="" class="grid-item sea"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_05.jpg" alt="" class="grid-item sea"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_06.jpg" alt="" class="grid-item mountain"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_07.jpg" alt="" class="grid-item sea"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_08.jpg" alt="" class="grid-item moon"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_09.jpg" alt="" class="grid-item sea"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_010.jpg" alt="" class="grid-item moon"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_011.jpg" alt="" class="grid-item mountain"
+          /></a>
+          <a title="Hello jQuery..." href="#"
+            ><img src="./images/gallery/gallery_012.jpg" alt="" class="grid-item mountain"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------- section footer ------------------------------>
+    <section class="section_footer">
+      <div class="inner">
+        <div class="footer_nav flex">
+          <div class="footer_logo"><img src="./images/logo.png" alt="" /></div>
+          <ul class="footer_menu flex">
+            <li><a href="#">서비스이용약관</a></li>
+            <li><a href="#">개인정보 이용방침</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_info">
+          마스프로젝트(주) 대표 : 일론 머스크 <br />
+          사업자등록번호 : XRE-58-HU-78425-000 <br />
+          통신판매업신고 : 2020-화성-제2154호 <br />
+          이메일 : spacetour@google.com <br />
+          주소 : 서울특별시 영등포구 분화구옆 큰길 574 ( 화성동 E8 - A172F00 )
+          <br />
+          고객센터 AM 10:00 ~ PM 05:00 / 주말, 공휴일 제외
+        </div>
+
+        <div class="footer_copyright">© 2020 Mars:Project Inc. All Rights Reserved</div>
+
+        <div class="social">
+          <a href="#"><i class="xi-instagram"></i></a>
+          <a href="#"><i class="xi-facebook"></i></a>
+          <a href="#"><i class="xi-youtube-play"></i></a>
+          <a href="$"><i class="xi-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/app.js" type="module"></script>
+
+    <script>
+      $(function () {
+        // ----------- full menu toggo -------------------//
+        var bars = $('.bars')
+        var menu = $('.menu')
+        var close = $('.close')
+
+        bars.on('click', function () {
+          menu.show()
+        })
+
+        close.on('click', function () {
+          menu.hide()
+        })
+
+        var mobileMenu = $('.menu_list > li > a')
+        mobileMenu.click(function () {
+          var subMeun = $(this).next('ul')
+          console.log(subMeun)
+          if (subMeun.is(':visible')) {
+            subMeun.slideUp()
+          } else {
+            subMeun.slideDown()
+          }
+        })
+
+        // ----------- header bg-toggle & goTop-------------------//
+        var header = $('.header')
+        var goTop = $('.go_top')
+
+        $(window).scroll(function () {
+          var scrollTopValue = $(document).scrollTop()
+
+          if (scrollTopValue > 0) {
+            header.addClass('active')
+          } else {
+            header.removeClass('active')
+          }
+
+          if (scrollTopValue > 800) {
+            goTop.fadeIn()
+          } else {
+            goTop.fadeOut()
+          }
+        })
+
+        goTop.click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 400)
+        })
+      })
+    </script>
   </body>
 </html>
